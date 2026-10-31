@@ -1,0 +1,7 @@
+import Link from "next/link";
+import { ArrowUpRight, Heart } from "lucide-react";
+import { Logo } from "./site-header";
+import { SUPPORT_EMAIL, SUPPORT_MAILTO } from "@/lib/site";
+export function SiteFooter() {
+  return <footer className="footer"><div className="container"><div className="footer-main"><div className="footer-about"><Logo light/><p>Las grandes ideas empiezan en pequeño.<br/>Hagamos realidad la tuya.</p><a className="footer-mail" href={SUPPORT_MAILTO}>{SUPPORT_EMAIL} <ArrowUpRight size={15}/></a></div><div><h4>EXPLORA</h4><Link href="/#cotizador">Fabricar mi PCB</Link><Link href="/galeria">Galería PCB</Link><Link href="/#como-funciona">Cómo funciona</Link><Link href="/pennies">Pennies</Link></div><div><h4>INFORMACIÓN Y CONTACTO</h4><Link href="/legal/aviso-legal">Aviso legal</Link><Link href="/legal/privacidad">Privacidad</Link><Link href="/legal/cookies">Cookies</Link><Link href="/legal/condiciones">Condiciones de uso</Link><Link href="/legal/derechos">Ejercer mis derechos</Link><Link href="/notificar">Notificar contenido</Link></div><div className="footer-note"><span className="footer-star">✳</span><p>Hecho cerca.<br/><strong>Para llegar lejos.</strong></p></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} ESPCB S.L. · Todos los derechos reservados.</span><span>Hecho con <Heart size={13} fill="currentColor"/> para quienes crean.</span></div></div></footer>;
+}
